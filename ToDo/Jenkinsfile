@@ -3,12 +3,16 @@
     stages {
         stage('Build') {
             steps {
-                bat 'echo "Olá Build"'
+                script {
+                    bat 'echo "Olá Build"'
+                }                
             }
         }
         stage('Deploy') {
             steps {
-                bat 'echo "Olá Deploy"'
+                script {
+                    bat 'echo "Olá Deploy"'
+                }
             }
         }
     }
