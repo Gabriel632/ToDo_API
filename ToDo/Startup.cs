@@ -33,7 +33,7 @@ namespace ToDo
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ToDo", Version = "v1.1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ToDo", Version = "v1.2" });
             });
         }
 
