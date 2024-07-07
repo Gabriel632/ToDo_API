@@ -3,17 +3,13 @@
     stages {
         stage('Build') {
             steps {
-                script {
-                    bat 'echo "Olá Build"'
-                }                
+                bat 'echo "Olá Build"'              
             }
         }
-        stage('Deploy') {
-            steps {
-                script {
-                    bat 'echo "Olá Deploy"'
-                }
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         bat 'echo "Olá Deploy"'
+        //     }
+        // }
     }
 }
