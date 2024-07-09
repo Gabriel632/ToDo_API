@@ -1,9 +1,30 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Stop IIS') {
             steps {
-                echo 'Hello World'
+                echo 'Stop IIS'
+            }
+        }
+        stage('Sleep') {
+            steps {
+                // sleep(5000)
+                echo 'Sleep'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Build'
+            }
+        }
+        stage('Publish') {
+            steps {
+                echo 'Publish'
+            }
+        }
+        stage('Re-Start IIS') {
+            steps {
+                echo 'Re-Start IIS'
             }
         }
     }
