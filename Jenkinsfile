@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Re-Start IIS') {
             steps {
-                bat '"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" Start-WebSite ''ToDo'''
+                bat 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Start-WebSite ToDo'
             }
         }
     }
