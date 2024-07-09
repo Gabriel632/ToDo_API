@@ -1,20 +1,10 @@
 ﻿pipeline {
     agent any
     stages {
-        stage('Checkout') {
+        stage('Example') {
             steps {
-                checkout scm
+                echo 'Hello World'
             }
         }
-        // stage ('Build') {
-        //     steps {
-        //         echo 'Olá Build'              
-        //     }
-        // }
-        // stage ('Deploy') {
-        //     steps {
-        //         echo 'Olá Deploy'
-        //     }
-        // }
     }
 }
