@@ -3,28 +3,27 @@ pipeline {
     stages {
         stage('Stop IIS') {
             steps {
-                echo 'Stop IIS'
+                bat 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Stop-WebSite ''ToDo'''
             }
         }
         stage('Sleep') {
             steps {
-                // sleep(5000)
-                echo 'Sleep'
+                sleep(5000)
             }
         }
         stage('Build') {
             steps {
-                echo 'Build'
+                bat 'dotnet build --configuration Release'
             }
         }
         stage('Publish') {
             steps {
-                echo 'Publish'
+                bat 'dotnet publish -c Release -o C:\\Repositorio\\inetpub\\wwwToDo'
             }
         }
         stage('Re-Start IIS') {
             steps {
-                echo 'Re-Start IIS'
+                bat 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe Start-WebSite ''ToDo'''
             }
         }
     }
