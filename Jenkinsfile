@@ -1,15 +1,20 @@
 ﻿pipeline {
     agent any
     stages {
-        stage ('Build') {
+        stage('Checkout') {
             steps {
-                echo 'Olá Build'              
+                checkout scm
             }
         }
-        stage ('Deploy') {
-            steps {
-                echo 'Olá Deploy'
-            }
-        }
+        // stage ('Build') {
+        //     steps {
+        //         echo 'Olá Build'              
+        //     }
+        // }
+        // stage ('Deploy') {
+        //     steps {
+        //         echo 'Olá Deploy'
+        //     }
+        // }
     }
 }
